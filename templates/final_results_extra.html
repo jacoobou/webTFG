@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Results - Extra</title>
+</head>
+<body>
+    <h2>Final Results - Extra</h2>
+    <table>
+        <tr>
+            <th>Identifier</th>
+            <th>Weighted Sum</th>
+        </tr>
+        {% for index, row in data.iterrows() %}
+            <tr>
+                <td>{{ row['distrito'] }}</td>
+                <td>{{ row['weighted_sum'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/" method="get">
+        <input type="submit" value="Start Over">
+    </form>    
+</body>
+</html>
