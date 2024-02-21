@@ -10,11 +10,17 @@
         <tr>
             <th>Identifier</th>
             <th>Weighted Sum</th>
+            <th>Price per m2</th>
+            <th>Population</th>
+            <th>Distance to center</th>
         </tr>
         {% for index, row in data.iterrows() %}
             <tr>
                 <td>{{ row['Municipio'] }}</td>
                 <td>{{ row['weighted_sum'] }}</td>
+                <td>{{ row['priceByArea_y'] }}</td>
+                <td>{{ row['Total_y'] }}</td>
+                <td>{{ row['distanciaCentro_y'] }}</td>
             </tr>
         {% endfor %}
     </table>

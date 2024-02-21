@@ -4,8 +4,8 @@ import copy
 
 app = Flask(__name__)
 
-df = pd.read_csv('./clustersAtractivoJuntos.csv') 
-df_extra = pd.read_csv('./distritosAtractivoJuntos.csv') 
+df = pd.read_csv('./clustersAtractivoJuntos_variablesWeb.csv') 
+df_extra = pd.read_csv('./distritosAtractivoJuntos_variablesWeb.csv') 
 
 @app.route('/')
 def index():
@@ -75,7 +75,7 @@ def final_results_extra():
     df_extra['weighted_sum'] += importances[7] * df_extra['sumaIntervecniones']
     
     #Population and general
-    df_extra['weighted_sum'] += importances[8] * df_extra['Número Habitantes']
+    df_extra['weighted_sum'] += importances[8] * df_extra['Número Habitantes_x']
     df_extra['weighted_sum'] += importances[9] * df_extra['Población densidad (hab./Ha.)']
     df_extra['weighted_sum'] += importances[10] * df_extra['frac_mujeres']
     df_extra['weighted_sum'] += importances[11] * df_extra['frac_extranjeros']
@@ -89,7 +89,7 @@ def final_results_extra():
     df_extra['weighted_sum'] += importances[15] * df_extra['espaciosCulturales_100']
     df_extra['weighted_sum'] += importances[15] * df_extra['espectaculos_100']
     df_extra['weighted_sum'] += importances[16] * df_extra['residuos(kg/hab/dia)']
-    df_extra['weighted_sum'] += importances[17] * df_extra['posicionVulnerabilidad']
+    df_extra['weighted_sum'] += importances[17] * df_extra['posicionVulnerabilidad_x']
     
     #Housing
     df_extra['weighted_sum'] += importances[18] * df_extra['añoMedioConstruccion']
@@ -104,7 +104,7 @@ def final_results_extra():
     df_extra['weighted_sum'] += importances[22] * df_extra['pisoBajo']
     df_extra['weighted_sum'] += importances[23] * df_extra['newDevelopment']
     df_extra['weighted_sum'] += importances[25] * df_extra['propertyType']
-    df_extra['weighted_sum'] += importances[24] * df_extra['priceByArea']
+    df_extra['weighted_sum'] += importances[24] * df_extra['priceByArea_x']
     df_extra['weighted_sum'] += importances[24] * df_extra['price']
     
     #Sanity
@@ -133,7 +133,7 @@ def final_results_extra():
     
     df_extra['weighted_sum'] = round(df_extra['weighted_sum'] / sumImportances , 2)
     sorted_df = df_extra.sort_values(by='weighted_sum', ascending=False)
-    return render_template('final_results_extra.html', data=sorted_df[['distrito', 'weighted_sum']])
+    return render_template('final_results_extra.html', data=sorted_df[['distrito', 'weighted_sum','priceByArea_y','Número Habitantes_y','posicionVulnerabilidad_y']])
 
 @app.route('/final_results', methods=['POST'])
 def final_results():
@@ -199,7 +199,7 @@ def final_results():
     filtered_df['weighted_sum'] += importances[7] * filtered_df['Magnitud89']
     
     #Population and general
-    filtered_df['weighted_sum'] += importances[8] * filtered_df['Total']
+    filtered_df['weighted_sum'] += importances[8] * filtered_df['Total_x']
     filtered_df['weighted_sum'] += importances[9] * filtered_df['densidad']
     filtered_df['weighted_sum'] += importances[10] * filtered_df['edadMedia']
     filtered_df['weighted_sum'] += importances[11] * filtered_df['frac_extranjeros']
@@ -224,7 +224,7 @@ def final_results():
     filtered_df['weighted_sum'] += importances[20] * filtered_df['pisoBajo']
     filtered_df['weighted_sum'] += importances[21] * filtered_df['newDevelopment']
     filtered_df['weighted_sum'] += importances[23] * filtered_df['propertyType']
-    filtered_df['weighted_sum'] += importances[22] * filtered_df['priceByArea']
+    filtered_df['weighted_sum'] += importances[22] * filtered_df['priceByArea_x']
     filtered_df['weighted_sum'] += importances[22] * filtered_df['price']
     
     #Sanity
@@ -237,7 +237,7 @@ def final_results():
     filtered_df['weighted_sum'] += importances[26] * filtered_df['orgNoSanitaria_100']
     
     #Transport
-    filtered_df['weighted_sum'] += importances[27] * filtered_df['distanciaCentro']
+    filtered_df['weighted_sum'] += importances[27] * filtered_df['distanciaCentro_x']
     filtered_df['weighted_sum'] += importances[28] * filtered_df['Bus_100']
     filtered_df['weighted_sum'] += importances[28] * filtered_df['servicioCoches_100']
     filtered_df['weighted_sum'] += importances[29] * filtered_df['estacionTren_100']
@@ -256,7 +256,7 @@ def final_results():
     
     filtered_df['weighted_sum'] = round(filtered_df['weighted_sum'] / sumImportances , 2)
     sorted_df = filtered_df.sort_values(by='weighted_sum', ascending=False)
-    return render_template('final_results.html', data=sorted_df[['Municipio', 'weighted_sum']])
+    return render_template('final_results.html', data=sorted_df[['Municipio', 'weighted_sum','priceByArea_y','Total_y','distanciaCentro_y']])
 
 if __name__ == '__main__':
     app.run(debug=True)
