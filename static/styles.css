@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Oswald:wght@200..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Fredoka;
+    color: rgba(0, 0, 0, .8);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.site-header {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(204, 154, 16, 0.808);
+    color: #fff; 
+}
+
+.left-section h1 {
+    margin: 0; 
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section span {
+    margin-right: 10px; 
+}
+
+.logo-madrid {
+    width: 100px; 
+    height: auto;
+    border-radius: 15%;
+}
+
+.municipality-form {
+    width: 80%;
+    max-width: 550px; 
+    margin: 0 auto; 
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.checkbox-item {
+    display: flex;
+    margin-bottom: 7px;
+}
+
+label {
+    display: inline-block; 
+    margin-bottom: 10px; 
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+input[type="checkbox"] {
+    display: inline-block; 
+    margin-right: 15px; 
+    vertical-align: middle;
+}
+
+.district-study-link {
+    display: inline-block;
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #09a349; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.district-study-link:hover {
+    background-color: #13b443be; /* Cambiar color de fondo al pasar el ratón por encima */
+}
+
+.submit-button {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
+    padding-left: 20px;
+}
+
+.content-left h2 {
+    padding-left: 60px; 
+}
+
+.content-left {
+    display: inline-block;
+    
+}
+
+.image-right {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-right img {
+    width: 550px; /* Cambia el ancho de la imagen según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px;
+}
+
+.main-footer {
+    margin-top: 10px;
+    background-color: #56CCF2;
+    color: white;
+    padding: .25em 0;
+    width: 100%; /* Asegurar que el pie de página ocupe todo el ancho */
+}
+
+.main-footer-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.footer-text {
+    display: inline-block; 
+    margin-right: 10px; 
+}
+
+.logo-footer {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+

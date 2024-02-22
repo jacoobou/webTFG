@@ -3,21 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Select Group</title>
+    <link rel="stylesheet" href="static/styles.css" />
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
-    <h2>Please, select which type of municipality you are interested in:</h2>
-    <form action="/select_importance" method="post" onsubmit="return validateForm()">
-        <label>Municipalities divided by population:</label><br>
-        <input type="checkbox" id="group1" name="group" value="1">
-        <label for="group1">Group 1: Municipalities with inhabitants between 60 and 2.700</label><br>
-        <input type="checkbox" id="group2" name="group" value="2">
-        <label for="group2">Group 2: Municipalities with inhabitants between 2.800 and 39.000</label><br>
-        <input type="checkbox" id="group3" name="group" value="3">
-        <label for="group3">Group 3: Municipalities with inhabitants between 50.000 and 210.000</label><br><br>
-        <a href="/madrid">Do you want to live in Madrid? Press here to have a district study</a><br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <header class="site-header">
+        <div class="left-section">
+            <h1>Madrid Zone Selector</h1>
+        </div>
+        <div class="right-section">
+            <span>Comunidad de Madrid</span>
+            <img class="logo-madrid" src="../static/logoMadrid.png" alt="LogoMadrid">
+        </div>
+    </header>
+    
+
+    <div class="container">
+        <div class="content-left">
+            <h2>Please, select which type of municipality you are interested in:</h2>
+            <form action="/select_importance" method="post" onsubmit="return validateForm()" class="municipality-form">
+                <div class="checkbox-group">
+                    <div class="checkbox-item checkbox-container">
+                        <input type="checkbox" id="group1" name="group" value="1">
+                        <label for="group1">Group 1: Municipalities with inhabitants between 60 and 2,700</label><br>
+                    </div>  
+                    <div class="checkbox-item checkbox-container">
+                        <input type="checkbox" id="group2" name="group" value="2">
+                        <label for="group2">Group 2: Municipalities with inhabitants between 2,800 and 39,000</label><br>
+                    </div>
+                    <div class="checkbox-item checkbox-container">
+                        <input type="checkbox" id="group3" name="group" value="3">
+                        <label for="group3">Group 3: Municipalities with inhabitants between 50,000 and 210,000</label><br><br>
+                    </div>
+                </div>
+                <input type="submit" value="Next" class="submit-button">
+                <a href="/madrid" class="district-study-link">Do you want to live in Madrid? Press here to have a district study</a><br><br>
+            </form>
+        </div>
+        <div class="image-right">
+            <img src="../static/madridTorres.jpg" alt="Descripción de la imagen">
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="main-footer-container">
+            <div class="footer-text">Read the documentation</div>
+            <a href="https://www.github.com">
+                <img class="logo-footer" src="../static/logoGithub.png" alt="Logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>
 
