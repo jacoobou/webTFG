@@ -133,10 +133,14 @@ def final_results_extra():
     
     df_extra['weighted_sum'] = round(df_extra['weighted_sum'] / sumImportances , 2)
     df_extra['priceByArea_y'] = round(df_extra['priceByArea_y'] , 2)
-    df_extra['Número Habitantes_y'] = (df_extra['Número Habitantes_y']).astype(int)
-    df_extra['Número Habitantes_y'] = df_extra['Número Habitantes_y'].map('{:,}'.format)
-    df_extra['Número Habitantes_y'] = df_extra['Número Habitantes_y'].str.replace(',', '.')
-    df_extra['posicionVulnerabilidad_y'] = (df_extra['posicionVulnerabilidad_y']).astype(int)
+    try:
+        df_extra['Número Habitantes_y'] = (df_extra['Número Habitantes_y']).astype(int)
+        df_extra['Número Habitantes_y'] = df_extra['Número Habitantes_y'].map('{:,}'.format)
+        df_extra['Número Habitantes_y'] = df_extra['Número Habitantes_y'].str.replace(',', '.')
+        df_extra['posicionVulnerabilidad_y'] = (df_extra['posicionVulnerabilidad_y']).astype(int)
+    except: 
+        pass
+    
     sorted_df = df_extra.sort_values(by='weighted_sum', ascending=False)
     sorted_df = sorted_df.head(12)
     return render_template('final_results_extra.html', data=sorted_df[['distrito', 'weighted_sum','priceByArea_y','Número Habitantes_y','posicionVulnerabilidad_y']])
@@ -264,9 +268,12 @@ def final_results():
     
     filtered_df['weighted_sum'] = round(filtered_df['weighted_sum'] / sumImportances , 2)
     filtered_df['priceByArea_y'] = round(filtered_df['priceByArea_y'] , 2)
-    filtered_df['Total_y'] = (filtered_df['Total_y']).astype(int)
-    filtered_df['Total_y'] = filtered_df['Total_y'].map('{:,}'.format)
-    filtered_df['Total_y'] = filtered_df['Total_y'].str.replace(',', '.')
+    try:
+        filtered_df['Total_y'] = (filtered_df['Total_y']).astype(int)
+        filtered_df['Total_y'] = filtered_df['Total_y'].map('{:,}'.format)
+        filtered_df['Total_y'] = filtered_df['Total_y'].str.replace(',', '.')
+    except:
+        pass
     sorted_df = filtered_df.sort_values(by='weighted_sum', ascending=False)
     sorted_df = sorted_df.head(12)
     return render_template('final_results.html', data=sorted_df[['Municipio', 'weighted_sum','priceByArea_y','Total_y','distanciaCentro_y']])
