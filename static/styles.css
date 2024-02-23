@@ -171,6 +171,7 @@ input[type="checkbox"] {
 .slider-container {
     border-bottom: thick double #e02ac2c4;;
     padding-bottom: 1em;
+    margin-top: 1em;
     margin-bottom: 1em;
     display: flex;
 }
@@ -213,6 +214,84 @@ input[type="checkbox"] {
 .value-right {
     right: 0;
 }
+
+.title-type {
+    margin: 0;
+    font-family: Oswald;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.tour-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las filas se ajusten automáticamente */
+    justify-content: space-between;
+}
+
+.tour-row {
+    width: calc(25% - 20px); /* El ancho de cada columna */
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espacio entre las filas */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y la altura */
+    padding: 10px; /* Añade un poco de espacio interno */
+    position: relative; /* Permite el posicionamiento absoluto */
+}
+
+.tour-header {
+    font-weight: bold;
+    color: #555; /* Color de texto de encabezado */
+}
+
+.tour-item {
+    display: block;
+    margin-bottom: .5em; /* Espacio entre los elementos */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo para el elemento progress */
+progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 0; /* Espacio entre la barra de progreso y el texto */
+}
+
+/* Estilo para el texto dentro del elemento progress */
+.weighted-sum-item {
+    position: absolute; /* Posicionamiento absoluto para centrar */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* Color de texto */
+}
+
+.restart-form {
+    padding-top: 2em;
+    text-align: center;
+}
+.restart-button {
+    background-color: #e91010c7; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.restart-button:hover {
+    background-color: #b43636e0; 
+}
+
+.results-title {
+    text-align: center;
+}
+
 
 
 
