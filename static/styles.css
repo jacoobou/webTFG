@@ -161,6 +161,62 @@ input[type="checkbox"] {
     vertical-align: middle;
 }
 
+.container-question {
+    width: 90%; /* Ajusta el ancho según sea necesario */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    box-sizing: border-box; /* Incluye el relleno en el tamaño total */
+}
+
+.slider-container {
+    border-bottom: thick double #e02ac2c4;;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    display: flex;
+}
+
+.question-item {
+    padding-right: .5em;
+}
+
+.question-label {
+    width: 70%;
+}
+
+.slider-wrapper {
+    width: 250px;
+    display: flex; /* Hacer que los elementos estén en línea */
+    align-items: center; /* Alinear verticalmente al centro */
+    position: relative;
+}
+
+.slider-wrapper input[type="range"] {
+    width: 100%;
+}
+
+.value-left,
+.value-middle,
+.value-right {
+    position: absolute;
+    bottom: -10px; /* Ajusta esta distancia según sea necesario */
+}
+
+.value-left {
+    left: 0;
+}
+
+.value-middle {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.value-right {
+    right: 0;
+}
+
+
+
+
 
 
 

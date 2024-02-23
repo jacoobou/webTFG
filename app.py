@@ -174,6 +174,8 @@ def final_results():
     sumImportances += importances[29]
     sumImportances += importances[32]
     
+    print(sumImportances)
+    
     filtered_df['weighted_sum'] = 0
     
     #Education

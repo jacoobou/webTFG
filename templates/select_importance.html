@@ -3,144 +3,478 @@
 <head>
     <meta charset="UTF-8">
     <title>Select Importance</title>
+    <link rel="stylesheet" href="static/styles.css" />
 </head>
 <body>
-    <h2>Select Importance</h2>
-    <form action="/final_results" method="post">
-        <label for="private_education">Select from 1 to 100 the importance of private education:</label>
-        <input type="number" id="private_education" name="private_education" min="1" max="100" required><br><br>
+    <header class="site-header">
+        <div class="left-section">
+            <h1>Madrid Zone Selector</h1>
+        </div>
+        <div class="right-section">
+            <span>Comunidad de Madrid</span>
+            <img class="logo-madrid" src="../static/logoMadrid.png" alt="LogoMadrid">
+        </div>
+    </header>
 
-        <label for="public_education">Select from 1 to 100 the importance of public education:</label>
-        <input type="number" id="public_education" name="public_education" min="1" max="100" required><br><br>
+    <div class="container-question"> 
+        <h2>Select Importance</h2>
+        <form action="/final_results" method="post">
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="private_education">Select from 1 to 100 the importance of private education:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="private_education" name="private_education" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="public_education">Select from 1 to 100 the importance of public education:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="public_education" name="public_education" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
 
-        <label for="libraries">Select from 1 to 100 the importance of libraries:</label>
-        <input type="number" id="libraries" name="libraries" min="1" max="100" required><br><br>
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="libraries">Select from 1 to 100 the importance of libraries:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="libraries" name="libraries" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
 
-        <label for="activities_education">Select from 1 to 100 the importance of extra activities at school:</label>
-        <input type="number" id="activities_education" name="activities_education" min="1" max="100" required><br><br>
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="activities_education">Select from 1 to 100 the importance of extra activities at school:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="activities_education" name="activities_education" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="air_quality">Select from 1 to 100 the importance of air quality:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="air_quality" name="air_quality" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
 
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="temperature">Select from 1 to 100 the importance of temperature (the more importance the higher the temperature):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="temperature" name="temperature" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="solar_radiation">Select from 1 to 100 the importance of solar radiation:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="solar_radiation" name="solar_radiation" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="rain">Select from 1 to 100 the importance of rains (the more importance the lower the rains):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="rain" name="rain" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
 
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="total_population">Select from 1 to 100 the importance of total population (the more importance the higher the population):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="total_population" name="total_population" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="density">Select from 1 to 100 the importance of density (hab/m2) (the more importance the lower the density):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="density" name="density" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="average_age">Select from 1 to 100 the importance of average age (the more importance the lower the age):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="average_age" name="average_age" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="foreigners">Select from 1 to 100 the importance to presence of foreigners:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="foreigners" name="foreigners" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
 
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="young">Select from 1 to 100 the importance to presence of young people:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="young" name="young" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="highEduc">Select from 1 to 100 the importance to presence of people with high education:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="highEduc" name="highEduc" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="servicios_generales">Select from 1 to 100 the importance to general services (cultural spaces, museums, oil stations...):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="servicios_generales" name="servicios_generales" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="familiar_houses">Select from 1 to 100 the importance to presence of familiar houses (total number, antiquity and size):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="familiar_houses" name="familiar_houses" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="urban_units">Select from 1 to 100 the importance to presence urban residential units:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="urban_units" name="urban_units" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="oneToThree">Select from 1 to 100 the importance to presence of houses from 1 to 3 people of capacity:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="oneToThree" name="oneToThree" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="fourMore">Select from 1 to 100 the importance to presence of houses for more than 4 people of capacity:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="fourMore" name="fourMore" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="size">Select from 1 to 100 the importance to size of houses (m2, rooms, baths):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="size" name="size" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="general_features">Select from 1 to 100 the importance to quality of general features (lift, parking space, low flat if applies):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="general_features" name="general_features" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="new_development">Select from 1 to 100 the importance to presence of houses of new development:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="new_development" name="new_development" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="price">Select from 1 to 100 the importance of price of houses (total and per m2):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="price" name="price" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="chalets">Select from 1 to 100 the importance to presence of chalet (if low, flats and similar are benefited):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="chalets" name="chalets" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="centros">Select from 1 to 100 the importance to presence of clincs, hospitals:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="centros" name="centros" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="pharmacy">Select from 1 to 100 the importance to presence of pharmacies:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="pharmacy" name="pharmacy" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="otherCentros">Select from 1 to 100 the importance to presence of other specialized centers (dental clinics for instance):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="otherCentros" name="otherCentros" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="distance">Select from 1 to 100 the importance to distance to city center:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="distance" name="distance" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="vehicles">Select from 1 to 100 the importance to presence of transport vehicles (buses, taxis):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="vehicles" name="vehicles" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="stations">Select from 1 to 100 the importance to presence of public transport stops (metro, bus, cercanias):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="stations" name="stations" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="trabajadoresZona">Select from 1 to 100 the importance to presence of workers:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="trabajadoresZona" name="trabajadoresZona" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="paro">Select from 1 to 100 the importance to presence of people without work:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="paro" name="paro" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="workRatio">Select from 1 to 100 the importance to presence of percentage of people working:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="workRatio" name="workRatio" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="pension">Select from 1 to 100 the importance to presence of pensioners (the more importance the lower the amount of pensioners):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="pension" name="pension" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="renta">Select from 1 to 100 the importance to average income:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="renta" name="renta" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="organizations">Select from 1 to 100 the importance to presence of working organizations:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="organizations" name="organizations" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="funcionarios">Select from 1 to 100 the importance to presence of civil servants:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="funcionarios" name="funcionarios" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
 
-        <label for="air_quality">Select from 1 to 100 the importance of air quality:</label>
-        <input type="number" id="air_quality" name="air_quality" min="1" max="100" required><br><br>
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
 
-        <label for="temperature">Select from 1 to 100 the importance of temperature (the more importance the higher the temperature):</label>
-        <input type="number" id="temperature" name="temperature" min="1" max="100" required><br><br>
-
-        <label for="solar_radiation">Select from 1 to 100 the importance of solar radiation:</label>
-        <input type="number" id="solar_radiation" name="solar_radiation" min="1" max="100" required><br><br>
-
-        <label for="rain">Select from 1 to 100 the importance of rains (the more importance the lower the rains):</label>
-        <input type="number" id="rain" name="rain" min="1" max="100" required><br><br>
-
-
-
-
-        <label for="total_population">Select from 1 to 100 the importance of total population (the more importance the higher the population):</label>
-        <input type="number" id="total_population" name="total_population" min="1" max="100" required><br><br>
-
-        <label for="density">Select from 1 to 100 the importance of density (hab/m2) (the more importance the lower the density):</label>
-        <input type="number" id="density" name="density" min="1" max="100" required><br><br>
-
-        <label for="average_age">Select from 1 to 100 the importance of average age (the more importance the lower the age):</label>
-        <input type="number" id="average_age" name="average_age" min="1" max="100" required><br><br>
-
-        <label for="foreigners">Select from 1 to 100 the importance to presence of foreigners:</label>
-        <input type="number" id="foreigners" name="foreigners" min="1" max="100" required><br><br>
-
-        <label for="young">Select from 1 to 100 the importance to presence of young people:</label>
-        <input type="number" id="young" name="young" min="1" max="100" required><br><br>
-
-        <label for="highEduc">Select from 1 to 100 the importance to presence of people with high education:</label>
-        <input type="number" id="highEduc" name="highEduc" min="1" max="100" required><br><br>
-
-
-
-
-        <label for="servicios_generales">Select from 1 to 100 the importance to general services (cultural spaces, museums, oil stations...):</label>
-        <input type="number" id="servicios_generales" name="servicios_generales" min="1" max="100" required><br><br>
-
-
-
-
-        <label for="familiar_houses">Select from 1 to 100 the importance to presence of familiar houses (total number, antiquity and size):</label>
-        <input type="number" id="familiar_houses" name="familiar_houses" min="1" max="100" required><br><br>
-
-        <label for="urban_units">Select from 1 to 100 the importance to presence urban residential units:</label>
-        <input type="number" id="urban_units" name="urban_units" min="1" max="100" required><br><br>
-
-        <label for="oneToThree">Select from 1 to 100 the importance to presence of houses from 1 to 3 people of capacity:</label>
-        <input type="number" id="oneToThree" name="oneToThree" min="1" max="100" required><br><br>
-
-        <label for="fourMore">Select from 1 to 100 the importance to presence of houses for more than 4 people of capacity:</label>
-        <input type="number" id="fourMore" name="fourMore" min="1" max="100" required><br><br>
-
-        <label for="size">Select from 1 to 100 the importance to size of houses (m2, rooms, baths):</label>
-        <input type="number" id="size" name="size" min="1" max="100" required><br><br>
-
-        <label for="general_features">Select from 1 to 100 the importance to quality of general features (lift, parking space, low flat if applies):</label>
-        <input type="number" id="general_features" name="general_features" min="1" max="100" required><br><br>
-
-        <label for="new_development">Select from 1 to 100 the importance to presence of houses of new development:</label>
-        <input type="number" id="new_development" name="new_development" min="1" max="100" required><br><br>
-
-        <label for="price">Select from 1 to 100 the importance of price of houses (total and per m2):</label>
-        <input type="number" id="price" name="price" min="1" max="100" required><br><br>
-
-        <label for="chalets">Select from 1 to 100 the importance to presence of chalet (if low, flats and similar are benefited):</label>
-        <input type="number" id="chalets" name="chalets" min="1" max="100" required><br><br>
-
-
-
-
-        <label for="centros">Select from 1 to 100 the importance to presence of clincs, hospitals:</label>
-        <input type="number" id="centros" name="centros" min="1" max="100" required><br><br>
-
-        <label for="pharmacy">Select from 1 to 100 the importance to presence of pharmacies:</label>
-        <input type="number" id="pharmacy" name="pharmacy" min="1" max="100" required><br><br>
-
-        <label for="otherCentros">Select from 1 to 100 the importance to presence of other specialized centers (dental clinics for instance):</label>
-        <input type="number" id="otherCentros" name="otherCentros" min="1" max="100" required><br><br>
-
-
-
-
-        <label for="distance">Select from 1 to 100 the importance to distance to city center:</label>
-        <input type="number" id="distance" name="distance" min="1" max="100" required><br><br>
-
-        <label for="vehicles">Select from 1 to 100 the importance to presence of transport vehicles (buses, taxis):</label>
-        <input type="number" id="vehicles" name="vehicles" min="1" max="100" required><br><br>
-
-        <label for="stations">Select from 1 to 100 the importance to presence of public transport stops (metro, bus, cercanias):</label>
-        <input type="number" id="stations" name="stations" min="1" max="100" required><br><br>
-
-
-
-
-
-        <label for="trabajadoresZona">Select from 1 to 100 the importance to presence of workers:</label>
-        <input type="number" id="trabajadoresZona" name="trabajadoresZona" min="1" max="100" required><br><br>
-
-        <label for="paro">Select from 1 to 100 the importance to presence of people without work:</label>
-        <input type="number" id="paro" name="paro" min="1" max="100" required><br><br>
-
-        <label for="workRatio">Select from 1 to 100 the importance to presence of percentage of people working:</label>
-        <input type="number" id="workRatio" name="workRatio" min="1" max="100" required><br><br>
-
-        <label for="pension">Select from 1 to 100 the importance to presence of pensioners (the more importance the lower the amount of pensioners):</label>
-        <input type="number" id="pension" name="pension" min="1" max="100" required><br><br>
-
-        <label for="renta">Select from 1 to 100 the importance to average income:</label>
-        <input type="number" id="renta" name="renta" min="1" max="100" required><br><br>
-
-        <label for="organizations">Select from 1 to 100 the importance to presence of working organizations:</label>
-        <input type="number" id="organizations" name="organizations" min="1" max="100" required><br><br>
-
-        <label for="funcionarios">Select from 1 to 100 the importance to presence of civil servants:</label>
-        <input type="number" id="funcionarios" name="funcionarios" min="1" max="100" required><br><br>   
-
-        <input type="submit" value="Submit">
-    </form>
+    <footer class="main-footer">
+        <div class="main-footer-container">
+            <div class="footer-text">Read the documentation</div>
+            <a href="https://www.github.com">
+                <img class="logo-footer" src="../static/logoGithub.png" alt="Logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
