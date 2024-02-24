@@ -9,6 +9,10 @@ df_extra = pd.read_csv('./distritosAtractivoJuntos_variablesWeb.csv')
 
 @app.route('/')
 def index():
+    return render_template('home.html')
+
+@app.route('/select_group',methods=['GET'])
+def select_group():
     return render_template('select_group.html')
 
 @app.route('/select_importance', methods=['POST'])

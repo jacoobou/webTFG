@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Madrid Zone Selector</title>
+    <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="left-section">
+            <h1>Madrid Zone Selector - Home</h1>
+        </div>
+        <div class="right-section">
+            <span>Comunidad de Madrid</span>
+            <img class="logo-madrid" src="../static/logoMadrid.png" alt="LogoMadrid">
+        </div>
+    </header>
+    <section class="content-section container-home">
+        <h2 class="section-header">About</h2>
+        <img class="home-image" src="../static/mapaMadrid.jpg">
+        <p class="text-home">This API is developed with the aim of letting the user know which areas of the Community of Madrid best suit their needs. Before starting to use it, it is recommended to read the associated documentation, which can be accessed from the bottom right corner of the screen. However, a few remarks will be made below. This API is connected to data collected thanks to Idealista, the Madrid City Council and the Community of Madrid. With them, a variable by variable attractiveness index has been made according to the deviation of each area from the average in the Community in general. The point is that in many variables it is clear that the more it deviates either upwards or downwards the better it will be for the user, such as the number of hospitals, which will give a greater attractiveness to an area where this number is high. However, in other cases it is not so clear that what has been decided is what all users think is best. These cases are detailed below.</p>
+        <p class="text-home">After all, the aim of the questionnaire is to make a combination of the user's input of the importance to see which areas are the most suitable. In most of the questions, it can be understood as how well attended the services asked about are. In the case of education, if you give it a lot of importance, you will look for areas where the number of schools and teachers is above average for the number of pupils in the area. Others, such as temperature, have been considered the more the better, but if you give it an importance of 0, then areas where the temperature is lower will be favoured. These indications appear in the variables that may generate doubts, and following the example of temperature mentioned above, the user should respond according to what best suits his or her tastes. Other variables are: rainfall, total population, average age, average house size, distance to the centre, pensioners or unemployed people. For all of them, if the user is interested in his area being one of the best in that variable and agrees with the criteria attached in brackets, then he should mark a higher importance (10), if he does not agree with the criteria, he should mark a lower importance (0), and if he is not particularly interested in the variable he can leave it around half (5). In case it is not clear, the criterion considered for the average age is that the lower the better for the area. If you are interested in a low average age, then mark a 10, if you want a high average age, then mark a 0, and if you are indifferent, then mark a 5.</p>
+    </section>
+    <div class="restart-form">
+        <form action="/select_group" method="GET">
+            <button type="submit" class="submit-button">Go to study</button>
+        </form>
+    </div>
+
+    <footer class="main-footer">
+        <div class="main-footer-container">
+            <div class="footer-text">Read the documentation</div>
+            <a href="https://www.github.com">
+                <img class="logo-footer" src="../static/logoGithub.png" alt="Logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

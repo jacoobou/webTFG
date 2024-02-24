@@ -219,7 +219,7 @@ input[type="checkbox"] {
     margin: 0;
     font-family: Oswald;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .tour-container {
@@ -290,6 +290,47 @@ progress {
 
 .results-title {
     text-align: center;
+}
+
+.importance-title {
+    margin-bottom: 20px;
+    font-family: Oswald;
+    font-weight: bold;
+    font-size: 2.25em;
+    text-decoration: underline;
+}
+
+.home-image {
+    float: left;
+    height: 300px;
+    width: auto;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 0;
+    border-radius: 10%;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container-home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.section-header {
+    margin-bottom: 20px;
+    font-family: Oswald;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.text-home { 
+    text-align: justify;
+    margin-left: 40px;
 }
 
 
