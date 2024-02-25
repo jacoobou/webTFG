@@ -134,8 +134,11 @@ def final_results_extra():
     df_extra['weighted_sum'] += importances[33] * df_extra['rentaMedia']
     df_extra['weighted_sum'] += importances[34] * df_extra['localesAbiertos_100']
     
-    
-    df_extra['weighted_sum'] = round(df_extra['weighted_sum'] / sumImportances , 2)
+    if sumImportances == 0:
+        df_extra['weighted_sum'] = (df_extra.iloc[:, 1:16].sum(axis=1) + df_extra.iloc[:, 17:24].sum(axis=1) + df_extra.iloc[:, 25:31].sum(axis=1) + df_extra.iloc[:, 33:61].sum(axis=1)) / 56
+    else:
+        df_extra['weighted_sum'] = round(df_extra['weighted_sum'] / sumImportances , 2)
+        
     df_extra['priceByArea_y'] = round(df_extra['priceByArea_y'] , 2)
     try:
         df_extra['Número Habitantes_y'] = (df_extra['Número Habitantes_y']).astype(int)
@@ -187,9 +190,7 @@ def final_results():
     sumImportances += importances[28]
     sumImportances += importances[29]
     sumImportances += importances[32]
-    
-    print(sumImportances)
-    
+        
     filtered_df['weighted_sum'] = 0
     
     #Education
@@ -269,8 +270,11 @@ def final_results():
     filtered_df['weighted_sum'] += importances[35] * filtered_df['organizaciones_100']
     filtered_df['weighted_sum'] += importances[36] * filtered_df['funcionario_100']
     
+    if sumImportances == 0:
+        filtered_df['weighted_sum'] = (filtered_df.iloc[:, 1:22].sum(axis=1) + filtered_df.iloc[:, 23:60].sum(axis=1) + filtered_df.iloc[:, 61:62].sum(axis=1) + filtered_df.iloc[:, 63:67].sum(axis=1)) / 63
+    else:
+        filtered_df['weighted_sum'] = round(filtered_df['weighted_sum'] / sumImportances , 2)
     
-    filtered_df['weighted_sum'] = round(filtered_df['weighted_sum'] / sumImportances , 2)
     filtered_df['priceByArea_y'] = round(filtered_df['priceByArea_y'] , 2)
     try:
         filtered_df['Total_y'] = (filtered_df['Total_y']).astype(int)

@@ -111,6 +111,14 @@ input[type="checkbox"] {
     padding-left: 20px;
 }
 
+.container-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
 .content-left h2 {
     padding-left: 60px; 
 }
@@ -333,6 +341,16 @@ progress {
     margin-left: 40px;
 }
 
+.styled-link {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: #000; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del enlace */
+    margin: 10px;
+}
+
+.styled-link:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el cursor sobre él */
+}
 
 
 
