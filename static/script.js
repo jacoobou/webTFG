@@ -7,7 +7,11 @@ function validateForm() {
         }
     });
     if (!checked) {
-        alert("Debe seleccionar al menos un grupo.");
+        swal("Debe seleccionar al menos un grupo.", {
+            icon: "warning",
+            buttons: false,
+            timer: 2000,
+        });
         return false;
     }
     return true;

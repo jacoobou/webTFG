@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Madrid Zone Selector</title>
+    <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="left-section">
+            <h1>Madrid Zone Selector - Select Importance</h1>
+        </div>
+        <div class="right-section">
+            <span>Comunidad de Madrid</span>
+            <img class="logo-madrid" src="../static/logoMadrid.png" alt="LogoMadrid">
+        </div>
+    </header>
+    
+    <div class="container-question"> 
+        <h1 class='importance-title'>Value the importance of the following services:</h1>
+        <form action="/final_results_realestate" method="post">
+            <span class="title-type">Real estate market</span>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="urban_units">Presence urban residential units:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="urban_units" name="urban_units" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="size">Size of houses (m2, rooms, baths):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="size" name="size" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="general_features">Quality of general features (lift, parking space, low flat if applies):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="general_features" name="general_features" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="new_development">Presence of houses of new development:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="new_development" name="new_development" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="price">Price of houses (total and per m2):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="price" name="price" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            <input type="submit" value="Next" class="submit-button">
+        </form>
+    </div>
+    <footer class="main-footer">
+        <div class="main-footer-container">
+            <a href="/" class="styled-link">About</a>
+            <div class="footer-text">Read the documentation:</div>
+            <a href="https://www.github.com">
+                <img class="logo-footer" src="../static/logoGithub.png" alt="Logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

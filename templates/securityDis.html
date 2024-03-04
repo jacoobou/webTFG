@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Madrid Zone Selector</title>
+    <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="left-section">
+            <h1>Madrid Zone Selector - Select Importance</h1>
+        </div>
+        <div class="right-section">
+            <span>Comunidad de Madrid</span>
+            <img class="logo-madrid" src="../static/logoMadrid.png" alt="LogoMadrid">
+        </div>
+    </header>
+
+    <div class="container-question">
+        <h1 class='importance-title'>Value the importance of the following services:</h1>
+        <form action="/final_results_extra_security" method="post">
+            <span class="title-type">Transport</span>
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="bicis">BiciMad service (bikes, stops):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="bicis" name="bicis" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="metro">Public transport stops (metro):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="metro" name="metro" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            <span class="title-type">Security</span>
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="accidentes">Road safety:</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="accidentes" name="accidentes" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="detenidos">Presence of arrested people (the more importance the lower concentration):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="detenidos" name="detenidos" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="question-item question-label">
+                    <label for="policia">Number of interventions of the police in the area (the more importance the lower):</label>
+                </div>
+                <div class="question-item slider-wrapper">
+                    <input type="range" id="policia" name="policia" min="0" max="10" required>
+                    <span class="value-left">0</span>
+                    <span class="value-middle">5</span>
+                    <span class="value-right">10</span>
+                </div>
+            </div>
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
+
+    <footer class="main-footer">
+        <div class="main-footer-container">
+            <a href="/" class="styled-link">About</a>
+            <div class="footer-text">Read the documentation:</div>
+            <a href="https://www.github.com">
+                <img class="logo-footer" src="../static/logoGithub.png" alt="Logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
+
