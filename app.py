@@ -210,7 +210,7 @@ def final_results_extra():
             pass
         
         sorted_df = df_extra.sort_values(by='weighted_sum', ascending=False)
-        sorted_df = sorted_df.head(12)
+        sorted_df = sorted_df.head(10)
         return render_template('final_results_extra.html', data=sorted_df[['distrito', 'weighted_sum','priceByArea_y','Número Habitantes_y','posicionVulnerabilidad_y']]) 
     else:
         return render_template('economicDynamismDis.html')
@@ -397,7 +397,7 @@ def final_results_economy():
         except:
             pass
         sorted_df = filtered_df.sort_values(by='weighted_sum', ascending=False)
-        sorted_df = sorted_df.head(12)
+        sorted_df = sorted_df.head(10)
         return render_template('final_results.html', data=sorted_df[['Municipio', 'weighted_sum','priceByArea_y','Total_y','distanciaCentro_y']])
     else:
          return render_template('economicDynamismMun.html')

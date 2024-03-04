@@ -231,7 +231,7 @@ input[type="checkbox"] {
 }
 
 .tour-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -240,7 +240,7 @@ input[type="checkbox"] {
 }
 
 .tour-row {
-    width: calc(25% - 20px); /* El ancho de cada columna */
+    width: calc(20% - 20px); /* El ancho de cada columna */
     background-color: #f2f2f2;
     border-radius: 10px;
     margin-bottom: 20px; /* Espacio entre las filas */
