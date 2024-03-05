@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, redirect, session,url_for
 import pandas as pd
 import copy
+import config
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = config.SECRET_KEY
 
 df = pd.read_csv('./clustersAtractivoJuntos_variablesWeb.csv') 
 df_extra = pd.read_csv('./distritosAtractivoJuntos_variablesWeb.csv') 
@@ -23,10 +24,7 @@ def select_importance():
     df_copy = copy.deepcopy(df)
     filtered_df = df_copy[df_copy['grupo'].isin([int(group) for group in groups])]
     madrid_option = request.form.get('madrid')
-    if madrid_option:
-        return redirect('/madrid')
-    else:
-        return render_template('educationMun.html', groups=groups)
+    return render_template('educationMun.html')
     
 @app.route('/madrid')
 def madrid():
@@ -124,7 +122,10 @@ def final_results_extra():
         sport_greenareas = session.get('sport_greenareas')
         
         sumImportances = (2 * private_education + 2 * public_education + libraries + 2 * foreigner_student 
-                         + density + foreigners + young + 3 * highEduc + women + 2 * good_houses + houses + 4 * size + 3 * general_features + 2 * new_development + 2 * price + 2 * centros + 4 * mayores + 3 * otherCentros + metro + 2 * bicis + accidentes + detenidos + policia + paro + locales + 2 * espectaculos + residuos + 5 * sport_greenareas)
+                         + density + foreigners + young + 3 * highEduc + women + 2 * good_houses + houses 
+                         + 4 * size + 3 * general_features + 2 * new_development + 2 * price + 2 * centros 
+                         + 4 * mayores + 3 * otherCentros + metro + 2 * bicis + accidentes + detenidos 
+                         + policia + paro + locales + 2 * espectaculos + residuos + 5 * sport_greenareas)
         
         df_extra['weighted_sum'] = 0
     
@@ -301,7 +302,7 @@ def final_results_economy():
         organizations = session.get('organizations')
         
         sumImportances = (3 * private_education + 3 * public_education + 3 * libraries + 6 * air_quality 
-                        + 3 * temperature + density + foreigners + young + 2 * highEduc + 2 * urban_units
+                        + 3 * temperature + density + foreigners + 2 * young + 2 * highEduc + 2 * urban_units
                         + 3 * general_features + new_development + 2 * price + centros + pharmacy + 5 * otherCentros
                         + distance + 2 * vehicles + 2 * stations + 3 * trabajadoresZona + paro + pension + organizations)
         
@@ -336,6 +337,7 @@ def final_results_economy():
         filtered_df['weighted_sum'] += density * filtered_df['densidad']
         filtered_df['weighted_sum'] += foreigners * filtered_df['frac_extranjeros']
         filtered_df['weighted_sum'] += young * filtered_df['frac_young']
+        filtered_df['weighted_sum'] += young * filtered_df['edadMedia']
         filtered_df['weighted_sum'] += highEduc * filtered_df['frac_HighEduc']
         
         #Housing
