@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request, redirect, session,url_for
 import pandas as pd
 import copy
-import config
 
 app = Flask(__name__)
-app.secret_key = config.SECRET_KEY
+app.secret_key = 'whatever' #no need for secret key since there is no authentication
 
 df = pd.read_csv('./clustersAtractivoJuntos_variablesWeb.csv') 
 df_extra = pd.read_csv('./distritosAtractivoJuntos_variablesWeb.csv') 
