@@ -75,18 +75,18 @@ input[type="checkbox"] {
 
 .district-study-link {
     display: inline-block;
-    padding: 10px 20px; /* Espaciado interno */
-    background-color: #09a349; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    text-decoration: none; /* Eliminar subrayado del enlace */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    padding: 10px 20px; 
+    background-color: #09a349; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
     white-space: nowrap;
     font-size: 18px;
 }
 
 .district-study-link:hover {
-    background-color: #13b443be; /* Cambiar color de fondo al pasar el ratón por encima */
+    background-color: #13b443be; 
 }
 
 .submit-button {
@@ -135,8 +135,8 @@ input[type="checkbox"] {
 }
 
 .image-right img {
-    width: 550px; /* Cambia el ancho de la imagen según lo necesites */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 550px; 
+    height: auto; 
     border-radius: 15px;
 }
 
@@ -173,10 +173,11 @@ input[type="checkbox"] {
 
 
 .container-question {
-    width: 90%; /* Ajusta el ancho según sea necesario */
-    margin: 0 auto; /* Centra horizontalmente */
-    padding: 20px; /* Ajusta el relleno según sea necesario */
-    box-sizing: border-box; /* Incluye el relleno en el tamaño total */
+    width: 90%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box;
+    margin-bottom: 80px;
 }
 
 .slider-container {
@@ -197,8 +198,8 @@ input[type="checkbox"] {
 
 .slider-wrapper {
     width: 250px;
-    display: flex; /* Hacer que los elementos estén en línea */
-    align-items: center; /* Alinear verticalmente al centro */
+    display: flex; 
+    align-items: center; 
     position: relative;
 }
 
@@ -210,7 +211,7 @@ input[type="checkbox"] {
 .value-middle,
 .value-right {
     position: absolute;
-    bottom: -10px; /* Ajusta esta distancia según sea necesario */
+    bottom: -10px; 
 }
 
 .value-left {
@@ -238,51 +239,50 @@ input[type="checkbox"] {
     margin: 0 auto;
     text-align: center;
     display: flex;
-    flex-wrap: wrap; /* Permite que las filas se ajusten automáticamente */
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .tour-row {
-    width: calc(20% - 20px); /* El ancho de cada columna */
+    width: calc(20% - 20px);
     background-color: #f2f2f2;
     border-radius: 10px;
-    margin-bottom: 20px; /* Espacio entre las filas */
-    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y la altura */
-    padding: 10px; /* Añade un poco de espacio interno */
-    position: relative; /* Permite el posicionamiento absoluto */
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+    padding: 10px; 
+    position: relative; 
 }
 
 .tour-header {
     font-weight: bold;
-    color: #555; /* Color de texto de encabezado */
+    color: #555; 
 }
 
 .tour-item {
     display: block;
-    margin-bottom: .5em; /* Espacio entre los elementos */
-    text-align: center; /* Centra el texto */
+    margin-bottom: .5em; 
+    text-align: center; 
 }
 
-/* Estilo para el elemento progress */
 progress {
     width: 100%;
     height: 20px;
     border-radius: 10px;
-    margin-top: 0; /* Espacio entre la barra de progreso y el texto */
+    margin-top: 0; 
 }
 
-/* Estilo para el texto dentro del elemento progress */
 .weighted-sum-item {
-    position: absolute; /* Posicionamiento absoluto para centrar */
+    position: absolute; 
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: black; /* Color de texto */
+    color: black; 
 }
 
 .restart-form {
     padding-top: 2em;
     text-align: center;
+    margin-bottom: 80px;
 }
 .restart-button {
     background-color: #e91010c7; 
@@ -350,14 +350,14 @@ progress {
 }
 
 .styled-link {
-    text-decoration: none; /* Elimina el subrayado predeterminado */
-    color: #000; /* Color del texto */
-    cursor: pointer; /* Cambia el cursor al pasar por encima del enlace */
+    text-decoration: none; 
+    color: #000; 
+    cursor: pointer; 
     margin: 10px;
 }
 
 .styled-link:hover {
-    text-decoration: underline; /* Subraya el enlace al pasar el cursor sobre él */
+    text-decoration: underline;
 }
 
 
