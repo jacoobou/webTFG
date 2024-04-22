@@ -141,11 +141,13 @@ input[type="checkbox"] {
 }
 
 .main-footer {
-    margin-top: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     background-color: #56CCF2;
     color: white;
     padding: .25em 0;
-    width: 100%; /* Asegurar que el pie de página ocupe todo el ancho */
+    width: 100%;
 }
 
 .main-footer-container {
@@ -168,6 +170,7 @@ input[type="checkbox"] {
     display: inline-block;
     vertical-align: middle;
 }
+
 
 .container-question {
     width: 90%; /* Ajusta el ancho según sea necesario */
